@@ -13,6 +13,11 @@ node_modules
 dist-ssr
 *.local
 
+# Build files in root (needed for GitHub Pages branch deployment)
+# Uncomment these lines if you want to exclude build files from git
+# index.html
+# assets/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
