@@ -1,0 +1,5 @@
+{
+  "name": "WordReveal - Interactive Study Tool",
+  "description": "A powerful study aid that allows users to reveal text incrementally (word-by-word, sentence-by-sentence) to help with memorization and focused learning.",
+  "requestFramePermissions": []
+}

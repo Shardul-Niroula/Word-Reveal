@@ -1,0 +1,211 @@
+/* StudyArea Component Styles */
+
+.study-area {
+  flex: 1;
+  width: 100%;
+  max-width: 66rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  user-select: none;
+  touch-action: pan-y pinch-zoom; /* Allow vertical scrolling and pinch zoom, prevent horizontal swipe navigation */
+  cursor: grab;
+  /* Prevent overscroll and pull-to-refresh */
+  overscroll-behavior: contain;
+  /* Prevent iOS Safari bounce */
+  -webkit-overflow-scrolling: touch;
+  /* Prevent edge swipe navigation on iOS */
+  -webkit-touch-callout: none;
+  /* Prevent text selection on touch */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.study-area:active {
+  cursor: grabbing;
+}
+
+.reveal-container {
+  white-space: pre-wrap;
+  line-height: 1.625;
+  color: var(--text-primary);
+  font-size: var(--font-size, 1rem);
+  position: relative;
+  max-width: 172rem;
+  margin: 0 auto;
+}
+
+.instruction-card {
+  position: fixed;
+  top: 80px; /* Account for header height */
+  left: 0;
+  right: 0;
+  bottom: 120px; /* Account for footer height */
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.instruction-container {
+  max-width: 42rem;
+  margin: 0 auto;
+  background: var(--gradient-primary);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-accent);
+}
+
+.dark .instruction-container {
+  background: var(--gradient-secondary);
+  border-color: rgba(79, 70, 229, 0.3);
+}
+
+.instruction-header {
+  margin-bottom: 1.5rem;
+}
+
+.instruction-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-indigo-900);
+  margin-bottom: 0.5rem;
+}
+
+.dark .instruction-title {
+  color: var(--color-indigo-100);
+}
+
+.instruction-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-indigo-700);
+}
+
+.dark .instruction-subtitle {
+  color: var(--color-indigo-300);
+}
+
+.inline-icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.25rem;
+  vertical-align: text-bottom;
+  color: var(--color-amber-500);
+}
+
+.instruction-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .instruction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.instruction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-accent);
+}
+
+.dark .instruction-item {
+  background-color: rgba(30, 41, 59, 0.6);
+  border-color: rgba(79, 70, 229, 0.5);
+}
+
+.instruction-item.edit {
+  border-color: var(--border-accent);
+}
+
+.instruction-item.settings {
+  border-color: var(--border-accent);
+}
+
+.instruction-item.start {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.instruction-item.back {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.instruction-icon {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.instruction-content h3 {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.instruction-content p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 16rem;
+  color: var(--color-slate-400);
+  text-align: center;
+}
+
+.empty-state-icon {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.2;
+}
+
+.empty-state h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  font-size: 0.875rem;
+}
+
+/* Highlighted word styling */
+.highlighted-word {
+  background-color: var(--color-amber-200);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.dark .highlighted-word {
+  background-color: rgba(245, 158, 11, 0.2);
+}
+
+/* Hover effect for highlightable words */
+.highlight-hover {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.highlight-hover:hover {
+  box-shadow: 0 0 0 2px var(--color-indigo-400);
+  border-radius: 0.25rem;
+}
