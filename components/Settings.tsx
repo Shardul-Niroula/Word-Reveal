@@ -2,6 +2,7 @@
 import React from 'react';
 import { Settings, Theme, RevealMode } from '../types';
 import { Icons } from './icons';
+import '../src/styles/Settings.css';
 
 interface SettingsProps {
   settings: Settings;

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Settings, SessionState } from '../types';
 import { Icons } from './icons';
+import '../src/styles/Header.css';
 
 interface HeaderProps {
   settings: Settings;

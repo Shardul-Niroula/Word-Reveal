@@ -18,6 +18,8 @@ import {
   SETTINGS_KEY 
 } from './constants';
 import { splitTextIntoChunks, formatTime } from './utils';
+import './src/styles/App.css';
+import './src/styles/root.css';
 
 const App: React.FC = () => {
   // Persistence Loading

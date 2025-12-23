@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Icons } from './icons';
+import '../src/styles/Editor.css';
 
 interface EditorProps {
   onSave: (text: string) => void;

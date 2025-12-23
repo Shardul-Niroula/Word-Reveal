@@ -2,6 +2,7 @@
 import React from 'react';
 import { SessionState, Settings } from '../types';
 import { Icons } from './icons';
+import '../src/styles/StudyArea.css';
 
 interface StudyAreaProps {
   session: SessionState;
